@@ -1,0 +1,7 @@
+let compony = prompt("Enter the name of compony", "");
+let message;
+if (compony == 'Shivam'){
+    message = ('You are Right');
+} else { message = 'You are Wrong'};
+
+alert(message);
