@@ -1,0 +1,3 @@
+let compony = prompt('Which compony use this', "");
+(compony == "Shivam") ?
+ alert( 'Right') : alert('Wrong');
