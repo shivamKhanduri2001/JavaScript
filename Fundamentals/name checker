@@ -1,0 +1,6 @@
+let officialName = prompt('Enter the official name',"");
+let message;
+if (officialName == "ECMAScript"){
+    alert('Right!');
+} else{ alert('Wrong');
+}
