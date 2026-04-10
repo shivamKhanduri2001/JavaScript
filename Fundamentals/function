@@ -1,0 +1,11 @@
+function greet(){
+    let message = "Hello Sir";
+    alert(message);
+}
+
+let name = prompt("Enter you name","");
+if (name === "Shivam"){
+    greet();
+} else{
+    alert('Who are you?');
+}
