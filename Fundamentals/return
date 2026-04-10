@@ -1,0 +1,14 @@
+function accessMessage(age){
+    if(age >= 18){
+        return true;
+    } else { 
+        return confirm("Do you have your parents permission?");
+    }
+}
+
+let age = prompt("Enter you age","18");
+if (accessMessage(age)){
+    alert("Access Granted");
+} else{
+    alert("Acess Denied");
+}
