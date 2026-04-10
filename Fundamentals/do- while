@@ -1,0 +1,7 @@
+let guess;
+
+do {
+    guess = prompt("Guess the number:");
+} while (guess != 7);
+
+alert("Correct");
