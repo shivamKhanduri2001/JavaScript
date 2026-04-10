@@ -1,0 +1,14 @@
+let userName = prompt("Enter you name","");
+
+function greet(){
+    let message = 'Hello, ' + userName;
+    alert(message);
+
+}
+
+let result = prompt("What is the sum of 2 + 2 ?","");
+if ( Number(result) === 4){
+    greet();
+} else{
+    alert('No acess');
+}
