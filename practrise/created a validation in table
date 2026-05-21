@@ -1,0 +1,37 @@
+const readline = require('readline');
+const rl = readline.createInterface({
+    input : process.stdin,
+    output : process.stdout
+})
+
+function printTable(num){
+    for ( let i =1; i <= 10; i++){
+        console.log(num + 'x' + i + '=' + (num*i) );
+    }
+}
+
+function askNumber(){
+    rl.question('Enter a number: ', function(answer){
+        let num = parseInt(answer);
+        if (isNaN(num)){
+            console.log('Invalid input, please enter a value')
+        } else {
+            printTable(num);
+            askContinue();
+        };
+    });
+}
+
+function askContinue(){
+    rl.question('Do you want to continue? (y/n): ', function(answer){
+        if (answer === 'y'){
+            askNumber();
+        } else if (answer === 'n'){
+            console.log('GoodBye!');
+        } else {
+            askContinue();
+        }
+    })
+}
+
+askNumber();
