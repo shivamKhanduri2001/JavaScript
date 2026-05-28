@@ -1,0 +1,34 @@
+const readline = require('readline');
+const rl = readline.createInterface({
+    input : process.stdin,
+    output : process.stdout
+});
+
+let numbers = [];
+
+function askNumbers(){
+    if( numbers.length === 5){
+        averageCalculator();
+        return;
+    }
+    rl.question(`Enter number ${numbers.length +1}: `, function(answer){
+        let num = parseInt(answer);
+        if(isNaN(num)){
+            console.log('invalid input');
+        } else {
+            numbers.push(num);
+        } askNumbers();
+    });
+}
+
+function averageCalculator(){
+    let sum = 0;
+    for(i = 0; i < numbers.length; i++){
+        sum+=numbers[i];
+    } 
+    let avg = sum / numbers.length;
+    console.log('Average is : '+avg);
+    rl.close();
+}
+
+askNumbers();
