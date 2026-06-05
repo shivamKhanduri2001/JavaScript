@@ -1,0 +1,3 @@
+function getLoanMessage(annualIncome,creditScore){
+
+};
